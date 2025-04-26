@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: student003  # 服务名称可自定义
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python chat_with_003.py  # 确保与你的Python文件名一致
+    plan: free
