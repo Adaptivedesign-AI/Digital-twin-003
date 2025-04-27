@@ -257,6 +257,8 @@ Emotions should be expressed on a separate line and not followed by a normal res
 
 """
 
+student_avatar_url = "https://raw.githubusercontent.com/Adaptivedesign-AI/Digital-twin-003/main/image.png"
+
 def chat_with_student003(message, history):
     messages = [{"role": "system", "content": system_prompt}]
     
@@ -265,14 +267,13 @@ def chat_with_student003(message, history):
         messages.append({"role": "user", "content": user_msg})
         messages.append({"role": "assistant", "content": bot_reply})
     
-    # Add current message
     messages.append({"role": "user", "content": message})
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4",  # or "gpt-4-turbo" if available
+            model="gpt-4",  
             messages=messages,
-            temperature=0.7  # Makes responses more natural
+            temperature=0.7  
         )
         reply = response.choices[0].message.content.strip()
         return reply
@@ -284,7 +285,7 @@ def chat_with_student003(message, history):
 with gr.Blocks() as demo:
     gr.Markdown("## Talk to Student003 🧑‍🎓")
     
-    chatbot = gr.Chatbot(label="Conversation")
+    chatbot = gr.Chatbot(label="Conversation", avatar_images=(None, student_avatar_url))  # ← 注意这里 avatar_images
     msg = gr.Textbox(placeholder="Type your message...")
     clear = gr.Button("Clear")
     
