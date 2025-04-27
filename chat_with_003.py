@@ -248,9 +248,12 @@ fall asleep in math. dream about burgers. lol.
 Emotion: tired
 
 At the end of each reply, always include:
+
 - Emotion: [emotion label]
 
 Even if the conversation is casual, never skip these. Emotion is mandatory.
+
+Emotions should be expressed on a separate line and not followed by a normal response
 
 """
 
