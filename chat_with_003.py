@@ -320,13 +320,11 @@ if __name__ == "__main__":
 
 
     api = gr.Interface(
-        fn=lambda message: chat_with_student003(message, []),   # 简化版：单轮问答
+        fn=lambda message: chat_with_student003(message, []),  
         inputs=gr.Textbox(),
         outputs=gr.Textbox()
     )
 
-    # 打开 queue，同时让 API 也挂上
     demo.queue(api_open=True)
-    api.queue(api_open=True)
-    
-    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
+api.queue(api_open=True)
+demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)), share=True)
