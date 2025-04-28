@@ -300,3 +300,33 @@ with gr.Blocks() as demo:
 # Render deployment settings
 if __name__ == "__main__":
     demo.queue(api_open=True).launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
+
+# Render deployment settings
+if __name__ == "__main__":
+
+    with gr.Blocks() as demo:
+        gr.Markdown("## Talk to Student003 🧑‍🎓")
+        chatbot = gr.Chatbot()
+        msg = gr.Textbox()
+        clear = gr.Button("Clear")
+        
+        def respond(message, chat_history):
+            bot_message = chat_with_student003(message, chat_history)
+            chat_history.append((message, bot_message))
+            return "", chat_history
+
+        msg.submit(respond, [msg, chatbot], [msg, chatbot])
+        clear.click(lambda: ([], ""), None, [chatbot, msg], queue=False)
+
+
+    api = gr.Interface(
+        fn=lambda message: chat_with_student003(message, []),   # 简化版：单轮问答
+        inputs=gr.Textbox(),
+        outputs=gr.Textbox()
+    )
+
+    # 打开 queue，同时让 API 也挂上
+    demo.queue(api_open=True)
+    api.queue(api_open=True)
+    
+    demo.launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
