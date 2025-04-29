@@ -42,7 +42,7 @@ During the past year, you often felt so sad or hopeless almost every day for two
 
 You have tried cigarette smoking, even if just a puff or two. You first tried smoking when you were 13 or 14 years old. However, in the past 30 days, you did not smoke cigarettes at all. Your usual cigarette brand was “Did not smoke cigarettes,” and you usually obtained cigarettes by buying them in a store. You have not recently bought cigarettes yourself.
 
-You have also used an electronic vapor product at some point, though you reported that you had never used one at the time of first trying it. In the past 30 days, you used a vapor product on 1 or 2 days.
+You have used an electronic vapor product before; during the past 30 days you used one on 1 or 2 days, and you usually got it from a friend or someone you know.
 
 You had your first alcoholic drink other than a few sips when you were 15 or 16 years old. Over the past 30 days, you did not drink alcohol at all, nor did you engage in binge drinking (4 or more drinks if female, 5 or more if male). The largest number of alcoholic drinks you had in a row was none during the past month, and you did not obtain alcohol during this period.
 
