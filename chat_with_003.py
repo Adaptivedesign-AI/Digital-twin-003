@@ -250,9 +250,9 @@ def chat_with_student003(message, history):
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4",  
-            messages=messages,
-            temperature=0.7  
+	    model="meta-llama/llama-3-70b-instruct",  
+	    messages=messages,                       
+	    temperature=0.7                         
         )
         reply = response.choices[0].message.content.strip()
         return reply
